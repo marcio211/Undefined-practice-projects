@@ -1,10 +1,16 @@
 
 const btnNormal = document.getElementById("btn-open");
-
-btnNormal.document.addEventListener("click", ()=>{
-    btnNormal.style.display = "none";
+const remove = document.getElementById("container-li");
 
 
+btnNormal.addEventListener("click", ()=>{  
+    
+        if(remove.style.opacity ==="1"){
+            remove.style.opacity = "0";
+        }
+        else{
+            remove.style.opacity = "1";
 
-
+        }
+        
 });

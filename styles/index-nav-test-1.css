@@ -53,10 +53,22 @@ body{
 
 
 }
-.btn-menu:active{
-    background-color: rgb(217, 214, 214);
+.btn-menu i:active{
+    animation: roter 0.5s ease-in-out;
+    
 
 
+}
+@keyframes roter {
+    to{
+        transform: rotate(0deg);
+    }
+    from{
+         transform: rotate(180deg);
+    }
+
+
+    
 }
 @media screen and (min-width:680px){
     .btn-menu{
@@ -65,11 +77,26 @@ body{
     
 }
 @media screen and (max-width: 680px) {
-    .container-li{
-        display: none;
+    .container-nav-bar{
+        flex-direction: column;
+        position: relative;
         
         
    }
+   .container-li{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    margin-left: -50px;
+    margin-top: 100px;
+    gap: 10px;
+    transition: opacity 0.5s ease;
+    opacity: 0;
+
+    
+    
+   }
+   
 
     
 }
